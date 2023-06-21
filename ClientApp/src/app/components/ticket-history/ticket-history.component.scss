@@ -1,0 +1,31 @@
+.number-circle {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 5px;
+  background: #fff;
+  border: 2px solid #666;
+  color: #666;
+  text-align: center;
+  word-wrap: initial;
+  margin: 10px;
+}
+
+.ticket-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.draw-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid black;
+  margin: -1px -1px 0 0;
+}
+
+.ticket-history {
+  display: flex;
+  justify-content: center;
+}

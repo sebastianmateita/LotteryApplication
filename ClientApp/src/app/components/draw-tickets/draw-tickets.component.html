@@ -1,0 +1,30 @@
+<div class="container pt-4">
+  <section class="mb-4">
+    <div class="card">
+      <div class="card-header py-3">
+        <h5 class="mb-0 text-center"><strong>Draw Lottery Tickets</strong></h5>
+      </div>
+      <div class="card-body">
+        <form class="border border-light p-5" [formGroup]="drawFormGroup" (ngSubmit)="onSubmit()">
+          <p class="h4 mb-4">Draw ticket</p>
+
+          <mdb-form-control>
+            <input mdbValidate mdbInput type="number" id="numberOfBoxes" class="form-control mb-4" placeholder="Number of boxes" formControlName="numberOfBoxes" min="1" required>
+            <label mdbLabel class="form-label" for="numberOfBoxes">Number of boxes to generate</label>
+          </mdb-form-control>
+
+          <mdb-form-control>
+            <div class="form-check">
+              <input mdbCheckbox mdbInput class="form-check-input" type="checkbox" value="" id="generateSuperZahl" formControlName="generateSuperZahl" />
+              <label mdbLabel class="form-check-label" for="generateSuperZahl">
+                Generate SuperZahl
+              </label>
+            </div>
+          </mdb-form-control>
+
+          <button class="my-4 btn btn-primary" type="submit" [disabled]="drawFormGroup.invalid">Draw ticket</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
